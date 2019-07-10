@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="product_pricelist_item_date_pricelist_item_form" model="ir.ui.view">
+            <field name="name">product_pricelist_item_date.pricelist.item.form</field>
+            <field name="model">product.pricelist.item</field>
+            <field name="inherit_id" ref="product.product_pricelist_item_form_view"/>
+            <field name="arch" type="xml">
+                <field name="sequence" position="after">
+                    <field name="date_start"/>
+                    <field name="date_end"/>
+                    <newline/>
+                </field>
+            </field>
+        </record>
+
+       <record id="product_pricelist_date_pricelist_item_tree" model="ir.ui.view">
+            <field name="name">product_pricelist_date.pricelist.item.tree</field>
+            <field name="model">product.pricelist.item</field>
+            <field name="inherit_id" ref="product.product_pricelist_item_tree_view"/>
+            <field name="arch" type="xml">
+                <field name="min_quantity" position="after">
+                    <field name="date_start"/>
+                    <field name="date_end"/>
+               </field>
+            </field>
+        </record>
+
+    </data>
+</openerp>
